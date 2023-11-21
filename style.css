@@ -1,0 +1,102 @@
+body{
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.container-div{
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    border : 1px solid rgb(214, 209, 209);
+    height:auto;
+    width:auto;
+    padding:40px;
+    border-radius:5px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+label{
+    font-size:large;
+    font-weight: bold;
+}
+.space-div{
+    height:20px;
+}
+input{
+    margin-left: 30px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    background-color: rgb(236, 236, 236);
+    border:0
+}
+#name{
+    height:45px;
+    width:180px;
+    border-radius:5px;
+    margin-left:80px;
+    border-width: thin;
+    
+}
+#email{
+    height:45px;
+    width:180px;
+    border-radius:5px;
+    margin-left:80px;
+    border-width: thin;
+}
+#password{
+    height:45px;
+    width:180px;
+    border-radius:5px;
+    margin-left:50px;
+    border-width: thin;
+}
+#dob{
+    height:45px;
+    width:180px;
+    border-radius:5px;
+    margin-left:23px;
+    border-width: thin;
+}
+#acceptTermsandConditions{
+    margin:0
+}
+button{
+    height:40px;
+    width:100px;
+    border-radius:5px;
+    border-width: thin;
+    background-color: rgb(7, 184, 7);
+    color:white;
+    font-size: 14px;
+    font-weight: 600;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border:0
+}
+::-webkit-input-placeholder{
+    padding-left: 20px;
+}
+td{
+    padding:5px 10px 5px 10px;
+    border:1px solid rgb(199, 193, 193);
+    font-weight: 500;
+}
+th{
+    padding:10px 15px 10px 15px;
+    font-size: larger;
+    font-weight: bolder;
+}
+table{
+    width:100%;
+}
+h1{
+    text-align: center;
+}
+.entries{
+    margin-top: 50px;
+    height:auto;
+    width:700px;
+    padding:30px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 10px;
+}
