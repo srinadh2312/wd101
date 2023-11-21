@@ -12,6 +12,31 @@ const getEntries = () =>{
 let userEntries = getEntries();
 
 
+const displayEntries = () =>{
+    const entries = getEntries();
+
+    const tableEntries = entries.map((entry) =>{
+        const nameCell = `<td> ${entry.name}</td>`;
+        const emailCell = `<td> ${entry.email}</td>`;
+        const passwordCell = `<td> ${entry.password}</td>`;
+        const dobCell = `<td> ${entry.dob}</td>`;
+        const acceptTermsCell = `<td> ${entry.acceptTermsandConditions}</td>`;
+        const row =  `<tr> ${nameCell} ${emailCell} ${passwordCell} ${dobCell} ${acceptTermsCell}</tr>`;
+        return row;
+    }).join("\n");
+    
+    const table = `<table><tr>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Password</th>
+    <th>Dob</th>
+    <th>Accepted terms?</th>
+    </tr>${tableEntries}</table>`;
+
+    let details = document.getElementById('display-entries');
+    details.innerHTML = table;
+} 
+
 
 const saveForm = (event) =>{
     event.preventDefault();
@@ -57,28 +82,3 @@ document.addEventListener("DOMContentLoaded", function() {
       }
     });
   });
-
-const displayEntries = () =>{
-    const entries = getEntries();
-
-    const tableEntries = entries.map((entry) =>{
-        const nameCell = `<td> ${entry.name}</td>`;
-        const emailCell = `<td> ${entry.email}</td>`;
-        const passwordCell = `<td> ${entry.password}</td>`;
-        const dobCell = `<td> ${entry.dob}</td>`;
-        const acceptTermsCell = `<td> ${entry.acceptTermsandConditions}</td>`;
-        const row =  `<tr> ${nameCell} ${emailCell} ${passwordCell} ${dobCell} ${acceptTermsCell}</tr>`;
-        return row;
-    }).join("\n");
-    
-    const table = `<table><tr>
-    <th>Name</th>
-    <th>Email</th>
-    <th>Password</th>
-    <th>Dob</th>
-    <th>Accepted terms?</th>
-    </tr>${tableEntries}</table>`;
-
-    let details = document.getElementById('display-entries');
-    details.innerHTML = table;
-} 
